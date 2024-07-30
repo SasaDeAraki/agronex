@@ -1,0 +1,69 @@
+.containerPost {
+    max-width: 95%;
+    margin: 20px auto;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 7px 27px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    max-height: 200px;
+    min-height: 150px;
+}
+
+.PFP {
+    max-width: 40px;
+    max-height: 40px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.titleCategory {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-size: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 24px;
+}
+
+.category {
+    margin-left: auto;
+    padding-right: 180px;
+    color: #828282;
+    text-wrap: nowrap;
+}
+
+.postText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 120px;
+}
+
+.postButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.postButtons scan {
+    margin-bottom: auto;
+}
+
+.postButtons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-bottom: auto;
+}
+
+.postButtons button:first-child {
+    margin-top: auto;
+}
+
+.postBottom {
+    color: #5F5F5F;
+    margin-bottom: 10px;
+}
