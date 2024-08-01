@@ -1,17 +1,16 @@
-import './NavBar.css'
+import './NavBar.css';
 
-const Menu = () => {
+export default function Menu() {
     return (
-        <header className='menu'>
-            <h2>AgroNex</h2>
+            <nav className='menu'>
+            <a className='title'>Agronex</a>
             <div className='button-container'>
-                <button>Sobre nós</button>
-                <button>Suporte</button>
-                <button className='login'>Login</button>
-                <button className='login'>Cadastro</button>
+                <a>Sobre nós</a>
+                <a>Suporte</a>
+                <a className='login'>Login</a>
+                <a className='login'>Cadastro</a>
             </div>
-        </header>
+        </nav>
     )
 }
 
-export default Menu

@@ -1,15 +1,13 @@
 import Carrossel from "../../components/Carrossel/Carrossel"
 import Feed from "../../components/Feed/Feed"
-import NavBar from "../../components/NavBar/Navbar"
+import NavBar from "../../components/NavBar/NavBar"
 
-const Home = () => {
+export default function Home() {
     return(
         <div>
             <NavBar />
             <Carrossel />
-            <Feed />
+            <Feed /> 
         </div>
     )
 }
-
-export default Home
