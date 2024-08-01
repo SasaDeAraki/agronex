@@ -1,16 +1,17 @@
 import './NavBar.css';
+import { Link } from 'react-router-dom';
 
 export default function Menu() {
     return (
             <nav className='menu'>
-            <a className='title'>Agronex</a>
+            <Link to='/' className='title'>Agronex</Link>
             <div className='button-container'>
-                <a>Sobre nós</a>
-                <a>Suporte</a>
-                <a className='login'>Login</a>
-                <a className='login'>Cadastro</a>
+                <Link to='/sobre'>Sobre nós</Link>
+                <Link to='#'>Suporte</Link>
+                <Link className='login'>Login</Link>
+                <Link to='#' className='login'>Cadastro</Link>
             </div>
         </nav>
-    )
+    );
 }
 

@@ -21,7 +21,7 @@
     align-items: center;
 }
 
-.title {
+.titlePost {
     font-size: 22px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -48,7 +48,7 @@
     margin-right: 10px;
 }
 
-.postButtons scan {
+.postButtons span {
     margin-bottom: auto;
 }
 

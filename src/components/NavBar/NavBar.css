@@ -6,6 +6,8 @@
 }
 
 .title {
+    text-decoration: none;
+    color: inherit;
     font-size: 24px;
     margin-left: 40px;
     font-weight: 400;
@@ -19,6 +21,8 @@
 }
 
 .button-container a {
+    text-decoration: none;
+    color: black;
     font-size: 16px;
     cursor: pointer;
     margin-right: 10px;
