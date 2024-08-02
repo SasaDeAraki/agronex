@@ -23,6 +23,14 @@
     margin-right: auto;
 }
 
+.containerButtons button:nth-child(2) {
+    margin-right: 5px;
+}
+
+.containerButtons button:nth-child(3) {
+    margin-left: 5px;
+}
+
 .containerButtons button:last-child {
     margin-left: auto;
 }
