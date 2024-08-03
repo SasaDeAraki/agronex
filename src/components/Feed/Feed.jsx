@@ -3,6 +3,7 @@ import Post from "../Post/Post"
 import PostImg from "../PostImg/PostImg"
 import filter from "../../assets/filter.png"
 import search from "../../assets/search.png"
+import holder5  from "../../assets/holder5.png"
 
 const Feed = () => {
     return(
@@ -13,8 +14,7 @@ const Feed = () => {
                 <button>Região</button>
                 <button><img src={search}></img></button>
             </div>
-            <Post />
-            <PostImg />
+            <Post hasImage={holder5}/>
         </div>
     )   
 }

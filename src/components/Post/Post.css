@@ -19,6 +19,7 @@
 .titleCategory {
     display: flex;
     align-items: center;
+    margin: 5px 0;
 }
 
 .titlePost {
@@ -39,6 +40,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-height: 120px;
+    margin-right: 3px;
 }
 
 .postButtons {
@@ -66,4 +68,12 @@
 .postBottom {
     color: #5F5F5F;
     margin-bottom: 10px;
+}
+
+.postImgContent {
+    display: block;
+}
+
+.postImgFlex {
+    display: flex;
 }
