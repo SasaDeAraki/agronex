@@ -1,6 +1,5 @@
 .i-card-container {
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 55px 50px;
     margin-top: 25vh;
@@ -37,4 +36,8 @@
 .i-card-button {
     margin: 0 30px;
     cursor: pointer;
+}
+
+.i-card-button:last-child {
+    margin-left: auto;
 }

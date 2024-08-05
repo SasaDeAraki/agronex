@@ -18,6 +18,7 @@ const InfoCard = () => {
         {
             imagem: holder4,
             cor: '#E58BDC',
+            nome: 'Larissa Queiroz',
             funcao: 'Front-End, Back-End',
             descricao: 'maconha :D'
         }
@@ -43,9 +44,7 @@ const InfoCard = () => {
                 <div className="i-card-content">
                     <h1>{nome}</h1>
                     <h3>{funcao}</h3>
-                    <p>
-                        {descricao}
-                    </p>
+                    <p>{descricao}</p>
                 </div>
                 <img src={Arrow1} id="next-button" onClick={nextCard} className="i-card-button"></img>
             </div>
