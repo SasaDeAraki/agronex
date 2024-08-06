@@ -8,8 +8,6 @@ export default function Menu() {
             <div className='button-container'>
                 <Link to='/sobre'>Sobre nós</Link>
                 <Link to='#'>Suporte</Link>
-                <Link to='/' className='login'>Login</Link>
-                <Link to='/' className='login'>Cadastro</Link>
             </div>
         </nav>
     );
