@@ -7,9 +7,9 @@ export default function Menu() {
             <Link to='/home' className='title'>Agronex</Link>
             <div className='button-container'>
                 <Link to='/sobre'>Sobre nós</Link>
-                <Link to='#'>Suporte</Link>
+                <Link to='/suporte'>Suporte</Link>
+                <Link to='/'>Logout</Link>
             </div>
         </nav>
     );
 }
-
