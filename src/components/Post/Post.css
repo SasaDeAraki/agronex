@@ -10,16 +10,23 @@
 }
 
 .PFP {
-    max-width: 40px;
-    max-height: 40px;
+    width: 40px;
+    height: 40px;
     margin: 10px;
     border-radius: 5px;
+    object-fit: cover;
+}
+
+.postContent {
+    flex: 1;
+    overflow: hidden;
 }
 
 .titleCategory {
     display: flex;
     align-items: center;
     margin: 5px 0;
+    cursor: pointer;
 }
 
 .titlePost {
@@ -45,6 +52,7 @@
     max-height: 120px;
     margin-right: 3px;
     font-size: 14px;
+    min-height: 85px;
 }
 
 .postButtons {
@@ -52,6 +60,7 @@
     flex-direction: column;
     align-items: center;
     margin-right: 10px;
+    margin-left: auto;
 }
 
 .postButtons span {
@@ -72,6 +81,7 @@
 .postBottom {
     color: #5F5F5F;
     margin: 5px 0;
+    margin-top: auto;
 }
 
 .postImgContent {
@@ -80,6 +90,7 @@
 
 .postImgFlex {
     display: flex;
+    cursor: pointer;
 }
 
 .postImgImages img {

@@ -79,7 +79,7 @@ const Login = () => {
                     <span>
                         {isLogin ? 'Ainda não tem uma conta?' : 'Já tem uma conta?'}
                     </span>
-                    <a onClick={toggleMode}>
+                    <a className='alternar-login' onClick={toggleMode}>
                         {isLogin ? 'Cadastre-se!' : 'Fazer login'}
                     </a>
                 </div>
