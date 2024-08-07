@@ -6,7 +6,7 @@ import holder5  from "../../assets/holder5.png"
 
 const Feed = () => {
     return(
-        <div className="container">
+        <div className="Container">
             <div className="containerButtons">
                 <button><img src={filter}></img></button>
                 <button>Pra você</button>

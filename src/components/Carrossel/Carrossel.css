@@ -1,4 +1,4 @@
-.carousel {
+.gira-gira {
     position: relative;
     width: 90%;
     overflow: hidden;
@@ -8,21 +8,21 @@
     border: 2px solid #233527;
 }
 
-.carousel-inner {
+.gira-gira-inner {
     display: flex;
     transition: transform 0.5s ease;
 }
 
-.carousel-item {
+.gira-gira-item {
     min-width: 100%;
 }
 
-.carousel-item img {
+.gira-gira-item img {
     width: 100%;
     display: block;
 }
 
-.carousel-button {
+.gira-gira-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -33,10 +33,10 @@
     z-index: 10;
 }
 
-.carousel-button.prev {
+.gira-gira-button.prev {
     left: 10px;
 }
 
-.carousel-button.next {
+.gira-gira-button.next {
     right: 10px;
 }

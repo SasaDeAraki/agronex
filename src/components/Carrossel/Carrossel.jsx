@@ -21,18 +21,18 @@ const Carrossel = () => {
     };
 
     return (
-        <div className='carousel'>
-            <div className='carousel-inner' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        <div className='gira-gira'>
+            <div className='gira-gira-inner' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                 {images.map((src, index) => (
-                    <div className={`carousel-item ${index === currentIndex ? 'active' : ''}`} key={index}>
+                    <div className={`gira-gira-item ${index === currentIndex ? 'active' : ''}`} key={index}>
                         <img src={src} alt={`Slide ${index}`} />
                     </div>
                 ))}
             </div>
-            <button className='carousel-button prev' onClick={prevSlide}>
+            <button className='gira-gira-button prev' onClick={prevSlide}>
                 <img src={Arrow2}></img>
             </button>
-            <button className='carousel-button next' onClick={nextSlide}>
+            <button className='gira-gira-button next' onClick={nextSlide}>
                 <img src={Arrow1}></img>
             </button>
         </div>

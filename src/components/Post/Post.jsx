@@ -18,7 +18,7 @@ const Post = ({ hasImage }) => {
                     <h1 className="titlePost">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas ipsum non suscipit malesuada. Aenean vestibulum tempus diam. Aenean ac sapien tortor. Ut sollicitudin nunc lectus. Vestibulum elementum id sapien vitae tempor. Proin sed volutpat neque. Nullam lectus ante, placerat sit amet hendrerit id, molestie non risus. Nam vel eleifend urna. In quis varius diam. Aenean vel scelerisque mi.
                     </h1>
-                    <h3 className="category">{"->"} Categoria</h3>
+                    <h3 className="categoria">{"->"} Categoria</h3>
                 </div>
                 <div className='postImgFlex'>
                     {hasImage && (

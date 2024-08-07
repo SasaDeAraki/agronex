@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './Login.css'
 import holder5 from '../../assets/holder5.png'
 import { useNavigate } from 'react-router-dom';
-import * as bootstrap from 'bootstrap'
 
 const Login = () => {
     const navigate = useNavigate();
