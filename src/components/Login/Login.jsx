@@ -10,7 +10,6 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
 
 
     const toggleMode = () => {
@@ -39,9 +38,11 @@ const Login = () => {
                 navigate('/home')
             }
         } else {
-            // Lógica de cadastro
-            const newUser = { name, email, password };
-            setUsers([...users, newUser]);
+            if (name != '' && email != '' && password != '') {
+                navigate('/home')
+            } else {
+                alert('Não deixe campos em branco!');
+            }
         }
     };
 

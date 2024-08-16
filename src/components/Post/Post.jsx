@@ -12,9 +12,31 @@ import holder4 from "../../assets/holder4.png";
 
 const Post = ({ titulo, pfp, categoria, descricao, img }) => {
     const [show, setShow] = useState(false);
+    const [votes, setVotes] = useState(0);
+    const [voted, setVoted] = useState(null);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const handleUpVote = () => {
+        if (voted !== 'up') {
+            setVotes(prevVotes => voted === 'down' ? prevVotes + 2 : prevVotes + 1);
+            setVoted('up');
+        } else {
+            setVotes(prevVotes => prevVotes - 1);
+            setVoted(null);
+        }
+    }
+
+    const handleDownVote = () => {
+       if (voted !== 'down') {
+        setVotes(prevVotes => voted === 'up' ? prevVotes - 2 : prevVotes - 1);
+        setVoted('down');
+       } else {
+        setVotes(prevVotes => prevVotes + 1);
+        setVoted(null);
+       }
+    }
 
     return (
         <div className="containerPost">
@@ -45,9 +67,18 @@ const Post = ({ titulo, pfp, categoria, descricao, img }) => {
                 </div>
             </div>
             <div className="postButtons">
-                <button><img src={upvote} alt="Upvote"/></button>
-                <span>69</span>
-                <button><img src={downvote} alt="Downvote"/></button>
+                <button onClick={handleUpVote}>
+                    <img src={upvote} alt="Upvote" />
+                </button>
+                <span 
+                    id='votes'
+                    style={{color: votes > 0 ? 'green' : votes < 0 ? 'red' : 'black'}}
+                >
+                    {votes}
+                </span>
+                <button onClick={handleDownVote}>
+                    <img src={downvote} alt="Downvote" />
+                </button>
                 <button><img src={repost} alt="Repost"/></button>
                 <button><img src={commentary} alt="Commentary"/></button>
             </div>
@@ -57,13 +88,16 @@ const Post = ({ titulo, pfp, categoria, descricao, img }) => {
                 onHide={handleClose}
                 backdrop="true"
                 keyboard={false}
-                dialogClassName='custom-modal'
+                dialogClassName='modal-lg'
                 centered
             >
-                <Modal.Header closeButton>
+                <Modal.Header>
                     <Modal.Title>{titulo}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
+                    <div>
+                        <img src={img} />
+                    </div>
                     {descricao}
                 </Modal.Body>
             </Modal>

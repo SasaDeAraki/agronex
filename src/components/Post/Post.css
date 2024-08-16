@@ -33,7 +33,7 @@
     font-size: 22px;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-height: 24px;
+    max-height: 28px;
     font-weight: 400;
 }
 
@@ -53,6 +53,7 @@
     margin-right: 3px;
     font-size: 14px;
     min-height: 85px;
+    margin-bottom: 5px;
 }
 
 .postButtons {
