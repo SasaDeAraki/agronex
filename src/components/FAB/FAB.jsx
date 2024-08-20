@@ -3,12 +3,46 @@ import pen from '../../assets/pen.png'
 import { useState } from 'react'
 import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import holder2 from '../../assets/holder2.jpg'
 
-const FAB = () => {
+const FAB = ({ addPost }) => {
     const [show, setShow] = useState(false);
 
+    const [titulo, setTitulo] = useState('');
+    const [categoria, setCategoria] = useState('');
+    const [descricao, setDescricao] = useState('');
+    const [img, setImg] = useState(null);
+
     const handleShow = () => setShow(true);
-    const handleClose = () => setShow(false);
+    const handleClose = () => {
+        setTitulo('')
+        setCategoria('')
+        setDescricao('')
+        setImg(null)
+        setShow(false)
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const newPost = {
+            titulo: titulo,
+            pfp: holder2,
+            categoria: categoria,
+            descricao: descricao,
+            img: img
+        }
+
+        addPost(newPost);
+        handleClose();
+    }
+
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            setImg(URL.createObjectURL(file));
+        }
+    }
 
     return(
         <div>
@@ -25,22 +59,28 @@ const FAB = () => {
                 centered
             >
                 <Modal.Body>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className='form-group'>
-                            <label for='campo-titulo' className='col-form-label'>Título</label>
-                            <input type='text' id='campo-titulo' className='form-control'></input>
+                            <label htmlFor='campo-titulo' className='col-form-label'>Título</label>
+                            <input type='text' id='campo-titulo' className='form-control' value={titulo} onChange={(e) => setTitulo(e.target.value)} required></input>
                         </div>
                         <div className='form-group'>
-                            <label for='campo-texto' className='col-form-label'>O que está acontecendo?</label>
-                            <textarea className='form-control' id='campo-texto' maxLength='480' />
+                            <label htmlFor='campo-categoria' className='col-form-label'>Categoria</label>
+                            <input type='text' id='campo-categoria' className='form-control' value={categoria} onChange={(e) => setCategoria(e.target.value)} maxLength='30' required></input>
+                        </div>
+                        <div className='form-group'>
+                            <label htmlFor='campo-texto' className='col-form-label'>O que está acontecendo?</label>
+                            <textarea className='form-control' id='campo-texto' value={descricao} onChange={(e) => setDescricao(e.target.value)} maxLength='480' required />
+                        </div>
+                        <br />
+                        <div className='form-group'>
+                            <input type='file' id='campo-imagem' className='form-control' onChange={handleImageChange}></input>
+                        </div>
+                        <div className='modal-footer'>
+                            <button type='submit' className='btn btn-primary'>Enviar</button>
                         </div>
                     </form>
                 </Modal.Body>
-                <Modal.Footer>
-                    <div className='modal-footer'>
-                        <button type='submit' className='btn btn-primary'>Enviar</button>
-                    </div>
-                </Modal.Footer>
             </Modal>
         </div>
     )

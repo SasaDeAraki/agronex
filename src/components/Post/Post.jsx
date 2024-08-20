@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Post.css";
@@ -7,8 +6,6 @@ import upvote from "../../assets/upvote.png";
 import downvote from "../../assets/downvote.png";
 import repost from "../../assets/repost.png";
 import commentary from "../../assets/commentary.png";
-import holder3 from "../../assets/holder3.jpg";
-import holder4 from "../../assets/holder4.png";
 
 const Post = ({ titulo, pfp, categoria, descricao, img }) => {
     const [show, setShow] = useState(false);
@@ -68,7 +65,7 @@ const Post = ({ titulo, pfp, categoria, descricao, img }) => {
             </div>
             <div className="postButtons">
                 <button onClick={handleUpVote}>
-                    <img src={upvote} alt="Upvote" />
+                    <img src={upvote} alt="Upvote" style={{filter: voted === 'up' ? 'invert(45%) sepia(84%) saturate(353%) hue-rotate(63deg) brightness(97%) contrast(92%)' : 'none'}} />
                 </button>
                 <span 
                     id='votes'
@@ -77,7 +74,7 @@ const Post = ({ titulo, pfp, categoria, descricao, img }) => {
                     {votes}
                 </span>
                 <button onClick={handleDownVote}>
-                    <img src={downvote} alt="Downvote" />
+                    <img src={downvote} alt="Downvote" style={{filter: voted === 'down' ? 'invert(15%) sepia(90%) saturate(7500%) hue-rotate(353deg) brightness(92%) contrast(95%)' : 'none'}} />
                 </button>
                 <button><img src={repost} alt="Repost"/></button>
                 <button><img src={commentary} alt="Commentary"/></button>
