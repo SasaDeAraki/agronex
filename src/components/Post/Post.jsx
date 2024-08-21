@@ -6,6 +6,7 @@ import upvote from "../../assets/upvote.png";
 import downvote from "../../assets/downvote.png";
 import repost from "../../assets/repost.png";
 import commentary from "../../assets/commentary.png";
+import { format, isToday, isYesterday, parse } from 'date-fns';
 
 
 const Post = ({ titulo, pfp, categoria, descricao, img, date }) => {
@@ -15,6 +16,17 @@ const Post = ({ titulo, pfp, categoria, descricao, img, date }) => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const parsedDate = parse(date, 'HH:mm dd/MM/yyyy', new Date());
+
+    const isTodayDate = isToday(parsedDate);
+    const isYesterdayDate = isYesterday(parsedDate);
+
+    const formattedDate = isTodayDate
+        ? format(parsedDate, 'HH:mm') + ' Hoje'
+        : isYesterdayDate
+        ? format(parsedDate, 'HH:mm') + ' Ontem'
+        : format(parsedDate, 'HH:mm dd/MM/yyyy')
 
     const handleUpVote = () => {
         if (voted !== 'up') {
@@ -61,7 +73,7 @@ const Post = ({ titulo, pfp, categoria, descricao, img, date }) => {
                     </div>
                 </div>
                 <div className="postBottom">
-                    {date}
+                    {formattedDate}
                 </div>
             </div>
             <div className="postButtons">
