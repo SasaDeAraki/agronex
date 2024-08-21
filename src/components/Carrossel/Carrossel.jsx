@@ -8,7 +8,7 @@ import Arrow2 from '../../assets/Arrow 2.png'
 const Carrossel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const images = [
-        holder4,
+            holder4,
         holder5
     ];
 

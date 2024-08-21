@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import holder2 from '../../assets/holder2.jpg'
+import { format } from 'date-fns';
 
 const FAB = ({ addPost }) => {
     const [show, setShow] = useState(false);
@@ -30,7 +31,8 @@ const FAB = ({ addPost }) => {
             pfp: holder2,
             categoria: categoria,
             descricao: descricao,
-            img: img
+            img: img,
+            date: format(new Date(), 'HH:mm dd/MM/yyyy')
         }
 
         addPost(newPost);

@@ -22,11 +22,12 @@ const Feed = ({ posts }) => {
                         categoria={post.categoria}
                         descricao={post.descricao}
                         img={post.img}
+                        date={post.date}
                     />
                 ))}
             </div>
         </div>
-    )   
+    )
 }
 
 export default Feed

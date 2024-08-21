@@ -7,7 +7,8 @@ import downvote from "../../assets/downvote.png";
 import repost from "../../assets/repost.png";
 import commentary from "../../assets/commentary.png";
 
-const Post = ({ titulo, pfp, categoria, descricao, img }) => {
+
+const Post = ({ titulo, pfp, categoria, descricao, img, date }) => {
     const [show, setShow] = useState(false);
     const [votes, setVotes] = useState(0);
     const [voted, setVoted] = useState(null);
@@ -60,7 +61,7 @@ const Post = ({ titulo, pfp, categoria, descricao, img }) => {
                     </div>
                 </div>
                 <div className="postBottom">
-                    Hoje, 18:30
+                    {date}
                 </div>
             </div>
             <div className="postButtons">
