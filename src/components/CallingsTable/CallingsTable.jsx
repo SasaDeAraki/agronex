@@ -1,39 +1,45 @@
 import TableRow from '../TableRow/TableRow';
 import './CallingsTable.css';
-import React from 'react';
-import { format } from 'date-fns';
 
-const CallingsTable = () => {
-    const callingsData  = [
-        {
-            id: '001',
-            title: 'Falha ao realizar o cadastro',
-            lastUpdate: '21/08/2024 14:40',
-            status: 'Aberto'
-        },
-        {
-            id: '002',
-            title: 'Erro ao enviar post',
-            lastUpdate: '21/08/2024 14:39',
-            status: 'Fechado'
-        },
-        {
-            id: '003',
-            title: 'Erro ao comentar em um post',
-            lastUpdate: '21/08/2024 14:38',
-            status: 'Aberto' 
-        }
-    ]
+const CallingsTable = ({callingsData}) => {
 
- 
+    const countStatuses = (callingsData) => {
+        const counts = {aberto: 0, pendente: 0, fechado: 0};
+        
+        callingsData.forEach(calling => {
+            switch (calling.status.toLowerCase()) {
+                case 'aberto':
+                    counts.aberto++;
+                    break;
+                case 'pendente':
+                    counts.pendente++;
+                    break;
+                case 'fechado':
+                    counts.fechado++;
+                    break;
+                default:
+                    break;
+            }
+        });
+
+        return counts;
+    }
+
+    const { aberto, pendente, fechado } = countStatuses(callingsData);
+
     return (
         <div>
             <div className='container-tabela'>
+                <div className='contador-de-chamados'>
+                    <span>Abertos: {aberto}</span>
+                    <span>Pendentes: {pendente}</span>
+                    <span>Fechados: {fechado}</span>
+                </div>
                 <table className='tabela-chamados'>
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Título</th>
+                            <th>Assunto</th>
                             <th>Última atualização</th>
                             <th>Estado</th>
                         </tr>
@@ -44,8 +50,8 @@ const CallingsTable = () => {
                                 <TableRow 
                                 key={index}
                                 id={calling.id}
-                                title={calling.title}
-                                lastUpdate={calling.lastUpdate}
+                                assunto={calling.assunto}
+                                date={calling.date}
                                 status={calling.status}
                             />
                             )

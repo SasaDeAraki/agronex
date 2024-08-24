@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     height: calc(100vh - 57px);
+    flex-direction: column;
 }
 
 .tabela-chamados {
@@ -37,3 +38,15 @@
     border-bottom: 2px solid #009879;
 }
 
+.contador-de-chamados span {
+    padding: 0 50px;
+    font-weight: 500;
+}
+
+.contador-de-chamados :first-child {
+    color: red;
+}
+
+.contador-de-chamados :last-child {
+    color: green;
+}

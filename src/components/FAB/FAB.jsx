@@ -23,6 +23,7 @@ const FAB = ({ addPost }) => {
         setShow(false)
     };
 
+    
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -37,14 +38,14 @@ const FAB = ({ addPost }) => {
 
         addPost(newPost);
         handleClose();
-    }
+    };
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         if (file) {
             setImg(URL.createObjectURL(file));
         }
-    }
+    };
 
     return(
         <div>
