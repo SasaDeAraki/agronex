@@ -1,0 +1,28 @@
+.h-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.h-categoria {
+   margin-left: auto;
+}
+
+.imagem {
+    margin-top: 20px;
+}
+
+#comentario {
+    display: flex;
+}
+
+#enviar {
+    border: none;
+    margin-left: 5px;
+    margin-bottom: auto;
+}
+
+#enviar * {
+    width: 30px;
+    height: 30px;
+}

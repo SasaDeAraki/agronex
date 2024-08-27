@@ -103,12 +103,17 @@ const Post = ({ titulo, pfp, categoria, descricao, img, date }) => {
             >
                 <Modal.Header>
                     <Modal.Title>{titulo}</Modal.Title>
+                    <span className='votes-modal' style={{color: votes > 0 ? 'green' : votes < 0 ? 'red' : 'black'}}>
+                        {votes}
+                    </span>
                 </Modal.Header>
                 <Modal.Body>
                     <div>
-                        <img src={img} />
+                        <div>
+                            <img src={img} />
+                        </div>
+                        {descricao}
                     </div>
-                    {descricao}
                 </Modal.Body>
             </Modal>
         </div>

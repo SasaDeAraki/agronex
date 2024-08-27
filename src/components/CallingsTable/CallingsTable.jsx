@@ -50,7 +50,10 @@ const CallingsTable = ({callingsData}) => {
                                 <TableRow 
                                 key={index}
                                 id={calling.id}
+                                categoria={calling.categoria}
                                 assunto={calling.assunto}
+                                texto={calling.texto}
+                                imagem={calling.imagem}
                                 date={calling.date}
                                 status={calling.status}
                             />

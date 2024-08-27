@@ -100,3 +100,9 @@
     border: 2px solid #add3b7;
     margin-right: 10px;
 }
+
+.votes-modal {
+    margin-left: auto;
+    margin-right: 20px;
+    font-size: 24px;
+}

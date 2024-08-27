@@ -4,7 +4,6 @@ import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import { format } from 'date-fns';
-import { id } from 'date-fns/locale';
 
 const AbrirChamado = ({ addCalling, nextId }) => {
     const [show, setShow] = useState(false);
@@ -36,6 +35,7 @@ const AbrirChamado = ({ addCalling, nextId }) => {
             status: 'Aberto'
         }
 
+        
         addCalling(newCalling);
         handleClose();
     }

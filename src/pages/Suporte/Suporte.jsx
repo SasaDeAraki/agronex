@@ -3,17 +3,18 @@ import { useState } from "react";
 import AbrirChamado from "../../components/AbrirChamado/AbrirChamado.jsx"
 import CallingsTable from "../../components/CallingsTable/CallingsTable.jsx"
 import NavBar from "../../components/NavBar/NavBar.jsx"
+import holder4 from "../../assets/holder4.png"
 
 const Suporte = () => {
     const [callingsData, setCallingsData]  = useState([
         {
             id: '001',
-            categoria: '',
+            categoria: 'Suporte poggers',
             assunto: 'Falha ao realizar o cadastro',
-            texto: 'aaaa',
-            imagem: null,
+            texto: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, eveniet est? Obcaecati, fugit voluptate dolore qui quaerat illum dicta ipsam laudantium iure itaque sed quis reiciendis odit maxime velit consectetur similique facilis suscipit, praesentium voluptatum, doloribus molestiae tempore laboriosam. Impedit repudiandae magni id, nihil nulla fugiat beatae veritatis at velit voluptate debitis quasi accusantium! Sint sequi sapiente maxime minima ullam cupiditate, ratione dolorum. Quam minima dolore ullam harum magnam veritatis, doloremque, doloribus voluptatum ratione explicabo odio labore fuga placeat nostrum obcaecati. Maiores, quasi cumque minus ad sed voluptas minima in. Quis dicta fuga beatae, aperiam perferendis maxime est necessitatibus dolore.',
+            imagem: holder4,
             date: '21/08/2024 14:40',
-            status: 'Aberto'
+            status: 'Pendente'
         },
         {
             id: '002',
