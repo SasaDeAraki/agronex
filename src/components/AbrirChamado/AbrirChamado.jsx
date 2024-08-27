@@ -41,7 +41,7 @@ const AbrirChamado = ({ addCalling, nextId }) => {
     }
 
     const handleImageChange = (e) => {
-        const file = e.target.value[0];
+        const file = e.target.files[0];
         if (file) {
             setImagem(URL.createObjectURL(file));
         }

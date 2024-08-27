@@ -6,7 +6,7 @@ import './TableRow.css';
 import send from '../../assets/send.png'
 import Comentario from "../Comentario/Comentario";
 
-const TableRow = ({ id, categoria, assunto, texto, imagem, date, status }) => {
+const TableRow = ({ id, categoria, assunto, texto, imagem, date, status, updateCallingStatus }) => {
     const [show, setShow] = useState(false);
     const [comments, setComments] = useState([]);
     const [newCommentary, setNewCommentary] = useState('');
@@ -15,7 +15,16 @@ const TableRow = ({ id, categoria, assunto, texto, imagem, date, status }) => {
         if (newCommentary.trim() !== '') {
             setComments([...comments, newCommentary]);
             setNewCommentary('');
+
+            if (status != 'Fechado') {
+                updateCallingStatus(id, 'Pendente');
+            }
         }
+    }
+
+    const handleCloseCalling = () => {
+        updateCallingStatus(id, 'Fechado');
+        handleClose();
     }
 
     const handleShow = () => setShow(true);
@@ -53,6 +62,7 @@ const TableRow = ({ id, categoria, assunto, texto, imagem, date, status }) => {
                         {texto}
                         {imagem && (
                             <div className="imagem">
+                                <h5>Anexos:</h5>
                                 <a href={imagem} target="_blank" rel="noopener noreferrer">
                                     <img src={imagem} alt={`Imagem de ${assunto}`} style={{ maxWidth: '30%', cursor: 'pointer' }}></img>
                                 </a>
@@ -78,6 +88,9 @@ const TableRow = ({ id, categoria, assunto, texto, imagem, date, status }) => {
                         </div>
                     </div>
                 </Modal.Body>
+                <Modal.Footer>
+                    <button type="button" className="btn btn-danger" onClick={handleCloseCalling}>Fechar Chamado</button>
+                </Modal.Footer>
             </Modal>
         </>
     );

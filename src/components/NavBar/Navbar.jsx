@@ -6,7 +6,7 @@ export default function Menu() {
             <nav className='menu'>
             <Link to='/home' className='title'>Agronex</Link>
             <div className='button-container'>
-                <Link to='/sobre'>Sobre nós</Link>
+                <Link to='/sobre'>Sobre o projeto</Link>
                 <Link to='/suporte'>Suporte</Link>
                 <Link to='/'>Logout</Link>
             </div>

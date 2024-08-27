@@ -36,6 +36,13 @@ const Suporte = () => {
         }
     ]);
 
+    const updateCallingStatus = (id, newStatus) => {
+        const updatedCallings = callingsData.map(calling => 
+            calling.id === id ? { ...calling, status: newStatus } : calling
+        );
+        setCallingsData(updatedCallings);
+    }
+
     const addCalling = (newCalling) => {
         setCallingsData([...callingsData, newCalling])
     }
@@ -49,7 +56,7 @@ const Suporte = () => {
         <div>
             <NavBar />
             <AbrirChamado addCalling={addCalling} nextId={getNextId()} />
-            <CallingsTable callingsData={callingsData} />
+            <CallingsTable callingsData={callingsData} updateCallingStatus={updateCallingStatus} />
         </div>
     );
 }

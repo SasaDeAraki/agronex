@@ -1,7 +1,7 @@
 import TableRow from '../TableRow/TableRow';
 import './CallingsTable.css';
 
-const CallingsTable = ({callingsData}) => {
+const CallingsTable = ({callingsData, updateCallingStatus}) => {
 
     const countStatuses = (callingsData) => {
         const counts = {aberto: 0, pendente: 0, fechado: 0};
@@ -45,9 +45,8 @@ const CallingsTable = ({callingsData}) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {callingsData.map((calling, index) => {
-                            return(
-                                <TableRow 
+                        {callingsData.map((calling, index) => (
+                            <TableRow 
                                 key={index}
                                 id={calling.id}
                                 categoria={calling.categoria}
@@ -56,9 +55,9 @@ const CallingsTable = ({callingsData}) => {
                                 imagem={calling.imagem}
                                 date={calling.date}
                                 status={calling.status}
+                                updateCallingStatus={updateCallingStatus} // Correção aqui
                             />
-                            )
-                        })}
+                        ))}
                     </tbody>
                 </table>
             </div>

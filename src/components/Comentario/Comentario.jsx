@@ -7,7 +7,7 @@ const Comentario = ({ comentario }) => {
             <div className="container-comentario">
                 <div className='comentario-header'>
                     <h5>Admin</h5>
-                    <h6>{format(new Date(), 'dd/MM/yyyy mm:HH')}</h6>
+                    <h6>{format(new Date(), 'dd/MM/yyyy HH:mm')}</h6>
                 </div>
                 <div>
                     <p>{comentario}</p>
