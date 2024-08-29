@@ -7,6 +7,7 @@ import downvote from "../../assets/downvote.png";
 import repost from "../../assets/repost.png";
 import commentary from "../../assets/commentary.png";
 import { format, isToday, isYesterday, parse } from 'date-fns';
+import Comentario from '../Comentario/Comentario';
 
 
 const Post = ({ titulo, pfp, categoria, descricao, img, date }) => {
@@ -102,19 +103,36 @@ const Post = ({ titulo, pfp, categoria, descricao, img, date }) => {
                 centered
             >
                 <Modal.Header>
-                    <Modal.Title>{titulo}</Modal.Title>
-                    <span className='votes-modal' style={{color: votes > 0 ? 'green' : votes < 0 ? 'red' : 'black'}}>
-                        {votes}
-                    </span>
+                    <img src={pfp} className='PFP' style={{scale: '1.3'}}></img>
+                    <div className='header-post'>
+                        <Modal.Title>{titulo}</Modal.Title>
+                        <h3 className="categoria" style={{margin: '0', padding: '0', fontSize: '16px' }}>{categoria}</h3>
+                    </div>
+                    <div className='postButtons' style={{transform: 'scale(1.2)'}}>
+                        <button onClick={handleUpVote}>
+                            <img src={upvote} alt="Upvote" style={{filter: voted === 'up' ? 'invert(45%) sepia(84%) saturate(353%) hue-rotate(63deg) brightness(97%) contrast(92%)' : 'none'}} />
+                        </button>
+                        <span style={{color: votes > 0 ? 'green' : votes < 0 ? 'red' : 'black'}}>
+                            {votes}
+                        </span>
+                        <button onClick={handleDownVote}>
+                            <img src={downvote} alt="Downvote" style={{filter: voted === 'down' ? 'invert(15%) sepia(90%) saturate(7500%) hue-rotate(353deg) brightness(92%) contrast(95%)' : 'none'}} />
+                        </button>
+                    </div>
                 </Modal.Header>
                 <Modal.Body>
                     <div>
-                        <div>
+                        <div className='post-image'>
                             <img src={img} />
                         </div>
                         {descricao}
+                        <div className="postBottom" style={{width: '100%', display: 'flex'}}>
+                            <span style={{marginLeft: 'auto'}}>{formattedDate}</span>
+                        </div>
                     </div>
                 </Modal.Body>
+                <Modal.Footer>
+                </Modal.Footer>
             </Modal>
         </div>
     );

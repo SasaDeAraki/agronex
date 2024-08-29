@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 import './Carrossel.css';
-import holder4 from '../../assets/holder4.png';
-import holder5 from '../../assets/holder5.png';
 import Arrow1 from '../../assets/Arrow 1.png';
 import Arrow2 from '../../assets/Arrow 2.png';
 
 const Carrossel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const slides = [
-        { type: 'image', src: holder4 },
-        { type: 'image', src: holder5 },
         { type: 'youtube', videoId: 'bhQMzNqnfhE' }
     ];
 

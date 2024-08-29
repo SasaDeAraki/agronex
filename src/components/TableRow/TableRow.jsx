@@ -64,38 +64,40 @@ const TableRow = ({ id, categoria, assunto, texto, imagem, date, status, updateC
                 <Modal.Body>
                     <Tabs defaultActiveKey='descricao' id="uncontrolled-tab">
                         <Tab eventKey='descricao' title='Descrição'>
-                            <div>
-                                {texto}
-                                {imagem && (
-                                    <div className="imagem">
-                                        <h5>Anexos:</h5>
-                                        <a href={imagem} target="_blank" rel="noopener noreferrer">
-                                            <img src={imagem} alt={`Imagem de ${assunto}`} style={{ maxWidth: '30%', cursor: 'pointer' }}></img>
-                                        </a>
-                                    </div>
-                                )}
-                            </div>
-                            <div>
-                                <hr />
-                                <div className="form-group" style={{ width: '100%' }} id="comentario">
-                                    <textarea className="form-control" placeholder="Digite sua resposta..." value={newCommentary} onChange={(e) => setNewCommentary(e.target.value)}></textarea>
-                                    <button id="enviar" type="submit" onClick={handleNewComment}>
-                                        <img src={send}></img>
-                                    </button>
+                            <div className="descricao-content">
+                                <div>
+                                    {texto}
+                                    {imagem && (
+                                        <div className="imagem">
+                                            <h5>Anexos:</h5>
+                                            <a href={imagem} target="_blank" rel="noopener noreferrer">
+                                                <img src={imagem} alt={`Imagem de ${assunto}`} style={{ maxWidth: '30%', cursor: 'pointer' }}></img>
+                                            </a>
+                                        </div>
+                                    )}
                                 </div>
                                 <div>
-                                    {comments.length > 0 ? (
-                                        comments.map((comment, index) => (
-                                            <Comentario key={index} comentario={comment} />
-                                        ))
-                                    ) : (
-                                        <p>Sem comentários ainda.</p>
-                                    )}
+                                    <hr />
+                                    <div className="form-group" style={{ width: '100%' }} id="comentario">
+                                        <textarea className="form-control" placeholder="Digite sua resposta..." value={newCommentary} onChange={(e) => setNewCommentary(e.target.value)}></textarea>
+                                        <button id="enviar" type="submit" onClick={handleNewComment}>
+                                            <img src={send}></img>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        {comments.length > 0 ? (
+                                            comments.map((comment, index) => (
+                                                <Comentario key={index} comentario={comment} />
+                                            ))
+                                        ) : (
+                                            <p>Sem comentários ainda.</p>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </Tab>
                         <Tab eventKey='relacionados' title='Relacionados'>
-                            <div>
+                            <div className="descricao-content">
                                 {relatedData.length > 0 ? (
                                     <table>
                                         <tbody>
@@ -108,7 +110,9 @@ const TableRow = ({ id, categoria, assunto, texto, imagem, date, status, updateC
                                         </tbody>
                                     </table>
                                 ) : (
-                                    <p>Não há outros chamados relacionados.</p>
+                                    <div className="sem-chamados">
+                                        <p>Não há outros chamados relacionados.</p>
+                                    </div>
                                 )}
                             </div>
                         </Tab>

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './LoginPage.css'
-import holder5 from '../../assets/holder5.png'
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import bannerLogin from '../../assets/banner-login.png'
 
 const LoginPage = () => {
     const navigate = useNavigate();
@@ -72,8 +72,8 @@ const LoginPage = () => {
                     </div>
                 </div>
             </div>
-            <div className='login-background-image'>
-                <img src={holder5} />
+            <div className='login-background-image' style={{filter: 'brightness(80%)'}}>
+                <img src={bannerLogin} />
             </div>
         </div>
     );

@@ -1,5 +1,5 @@
 import './Comentario.css'
-import { format, isToday } from 'date-fns';
+import { format } from 'date-fns';
 
 const Comentario = ({ comentario }) => {
     return(

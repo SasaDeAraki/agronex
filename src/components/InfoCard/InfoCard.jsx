@@ -4,16 +4,18 @@ import holder2 from "../../assets/holder2.jpg"
 import holder4 from "../../assets/holder4.png"
 import Arrow1 from "../../assets/Arrow 1.png"
 import Arrow2 from "../../assets/Arrow 2.png"
+import samuel from '../../assets/samuel.png'
+import lain from '../../assets/lain.png'
 
 const InfoCard = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const cards = [
         {
-            imagem: holder2,
+            imagem: samuel,
             cor: '#B84343',
             nome: 'Samuel Viana',
-            funcao: 'Front-End',
-            descricao: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam libero dignissimos explicabo debitis. Placeat voluptas exercitationem tempora similique dolorum cum odit quibusdam, esse voluptatem perferendis suscipit totam enim a quas saepe ullam numquam libero ipsam minus iure nobis, quo incidunt dolores? Perspiciatis adipisci assumenda aliquam voluptas quae ea atque maiores. Nihil quaerat, culpa numquam ea eveniet aliquam, dicta mollitia et natus qui aliquid fugiat fugit quae modi deserunt odit voluptate soluta libero eaque? Ab quaerat amet beatae sunt asperiores fugiat neque, tempora ipsa porro quasi non, quas consectetur? Consectetur odio soluta suscipit magni, hic eaque? Beatae praesentium amet omnis odit!'
+            funcao: 'Front-End, Design, Parte lógica',
+            descricao: 'Oi! Eu sou o Samuel, um dos criadores deste projeto. Foi uma experiência interessante criar um site nessas proporções, que pode não ser muito grande, mas com certeza é maior do que qualquer coisa que eu já tenha feito antes, acabei passando bastante sufoco mas também aprendendo bastante no caminho!!'
         },
         {
             imagem: holder4,
@@ -21,6 +23,12 @@ const InfoCard = () => {
             nome: 'Larissa Queiroz',
             funcao: 'Front-End, Back-End',
             descricao: 'maconha :D'
+        },
+        {
+            imagem: lain,
+            cor: 'rgb(149 164 233)',
+            nome: 'Tecnologias utilizadas',
+            funcao: 'HTML, CSS, JS, React, Bootstrap, Algorítmos'
         }
     ]
 
