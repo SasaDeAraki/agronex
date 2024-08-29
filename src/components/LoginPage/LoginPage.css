@@ -54,6 +54,13 @@
     cursor: pointer;
 }
 
+.span-toogle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .span-toogle * {
     margin-top: 5px;
     font-size: 12px;

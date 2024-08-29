@@ -64,10 +64,10 @@ const AbrirChamado = ({ addCalling, nextId }) => {
                 <Modal.Body>
                     <form onSubmit={handleSubmit}>
                         <div className='form-group'>
-                            <label htmlFor='categoria' className='col-form-label'>Descrição:</label>
-                            <select id='categoria' className='form-control' required>
+                            <label htmlFor='categoria' className='col-form-label'>Categoria:</label>
+                            <select id='categoria' className='form-control' value={categoria} onChange={(e) => setCategoria(e.target.value)} required>
                                 <option value=''>Selecione uma opção</option>
-                                <option value='suporte-tecnico'>Suporte técnico</option>
+                                <option value='Suporte técnico' >Suporte técnico</option>
                             </select>
                         </div>
                         <div className='form-group'>

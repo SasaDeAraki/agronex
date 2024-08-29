@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import './Login.css'
+import './LoginPage.css'
 import holder5 from '../../assets/holder5.png'
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Login = () => {
+const LoginPage = () => {
     const navigate = useNavigate();
 
     const [isLogin, setIsLogin] = useState(true);
@@ -11,14 +12,6 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
 
-
-    const toggleMode = () => {
-        setIsLogin(!isLogin);
-        setEmail('');
-        setPassword('');
-        setName('');
-        setConfirmPassword('');
-    };
 
     const [users, setUsers] = useState([
         {
@@ -30,26 +23,18 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (isLogin) {
-            const user = users.find(user => user.email === email && user.password === password);
-            if (!user) {
-                alert('Email ou senha incorretos.');
-            } else {
-                navigate('/home')
-            }
+        const user = users.find(user => user.email === email && user.password === password);
+        if (!user) {
+            alert('Email ou senha incorretos.');
         } else {
-            if (name != '' && email != '' && password != '') {
-                navigate('/home')
-            } else {
-                alert('Não deixe campos em branco!');
-            }
+            navigate('/home')
         }
     };
 
     return (
         <div className='login'>
             <div className='login-container'>
-                <h2>{isLogin ? 'Login' : 'Cadastro'}</h2>
+                <h2>Login</h2>
                 <form onSubmit={handleSubmit}>
                     {!isLogin && (
                         <input
@@ -77,12 +62,14 @@ const Login = () => {
                     <button type="submit">{isLogin ? 'Entrar' : 'Cadastrar'}</button>
                 </form>
                 <div className='span-toogle'>
-                    <span>
-                        {isLogin ? 'Ainda não tem uma conta?' : 'Já tem uma conta?'}
-                    </span>
-                    <a className='alternar-login' onClick={toggleMode}>
-                        {isLogin ? 'Cadastre-se!' : 'Fazer login'}
-                    </a>
+                    <div>
+                        <span>Ainda não tem uma conta? </span>
+                        <Link to='/cadastro' className='alternar-login'>Cadastre-se!</Link>
+                    </div>
+                    <div>
+                        <span>Esqueceu a senha? </span>
+                        <a href="mailto:larissaqbosso@gmail.com" className='alternar-login'>Entre em contato</a>
+                    </div>
                 </div>
             </div>
             <div className='login-background-image'>
@@ -92,4 +79,4 @@ const Login = () => {
     );
 };
 
-export default Login
+export default LoginPage
