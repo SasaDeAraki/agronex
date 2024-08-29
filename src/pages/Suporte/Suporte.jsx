@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import AbrirChamado from "../../components/AbrirChamado/AbrirChamado.jsx"
 import CallingsTable from "../../components/CallingsTable/CallingsTable.jsx"
@@ -18,7 +17,7 @@ const Suporte = () => {
         },
         {
             id: '002',
-            categoria: '',
+            categoria: 'Suporte poggers',
             assunto: 'Erro ao enviar post',
             texto: 'aaaa',
             imagem: null,
@@ -27,7 +26,7 @@ const Suporte = () => {
         },
         {
             id: '003',
-            categoria: '',
+            categoria: 'Suporte poggers',
             assunto: 'Erro ao comentar em um post',
             texto: 'aaaa',
             imagem: null,

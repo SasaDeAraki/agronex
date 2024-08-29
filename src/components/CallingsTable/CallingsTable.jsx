@@ -55,7 +55,8 @@ const CallingsTable = ({callingsData, updateCallingStatus}) => {
                                 imagem={calling.imagem}
                                 date={calling.date}
                                 status={calling.status}
-                                updateCallingStatus={updateCallingStatus} // Correção aqui
+                                updateCallingStatus={updateCallingStatus}
+                                callingsData={callingsData}
                             />
                         ))}
                     </tbody>
