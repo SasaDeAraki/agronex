@@ -5,27 +5,55 @@ import Feed from "../../components/Feed/Feed"
 import NavBar from "../../components/NavBar/NavBar"
 import agricultor1 from '../../assets/agricultor1.png'
 import agricultor2 from '../../assets/agricultor2.png'
+import agricultor3 from '../../assets/agricultor3.png'
+import agricultor4 from '../../assets/agricultor4.png'
+import agricultor5 from '../../assets/agricultor5.png'
 import imagem1 from '../../assets/imagem1.png'
+import batata from '../../assets/batata.png'
 
 export default function Home() {
 
     const [posts, setPosts] = useState([
         {
-            titulo: 'Exemplo de post',
+            titulo: "Como Melhorar a Fertilidade do Solo com Compostagem",
             pfp: agricultor1,
-            categoria: 'Pecuária',
-            descricao: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dicta ea nulla quisquam unde deleniti nobis omnis totam aut rem laboriosam cum, quam optio velit porro aspernatur. Ratione quo veritatis, sunt provident exercitationem distinctio harum tempora amet repellendus animi dolore inventore id fugiat ipsam explicabo dolorem eveniet delectus. Dolorum esse omnis sit, natus perspiciatis totam, earum recusandae maiores accusantium officiis fugit reiciendis molestiae consectetur suscipit. Earum nisi error aspernatur, enim porro officiis tenetur unde, laboriosam quisquam velit quidem mollitia? Voluptas eaque, cumque odit praesentium deserunt tenetur eligendi esse alias voluptatem, inventore blanditiis libero eveniet itaque architecto rerum unde debitis totam!',
+            categoria: "Dicas de Cultivo",
+            descricao: "Descubra como a compostagem pode melhorar a qualidade do solo e aumentar a produtividade das suas colheitas. Este post explica os benefícios da compostagem, como preparar a compostagem em casa e como aplicá-la de forma eficaz.",
             img: null,
-            date: '14:24 21/08/2024'
+            date: "09:00 30/08/2024"
         },
         {
-            titulo: 'Post sobre agricultura',
+            titulo: "Problemas com Pulgões",
             pfp: agricultor2,
-            categoria: 'Agricultura',
-            descricao: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius culpa tempora tempore expedita odit iusto vitae id fugiat recusandae, modi enim voluptas non in aperiam iure? Illo, cum, asperiores quis nostrum repudiandae minus laudantium nihil exercitationem dolorem nisi non odit blanditiis temporibus doloribus animi porro? Perspiciatis in debitis excepturi pariatur!',
+            categoria: "Pedido de Ajuda",
+            descricao: "Estou enfrentando uma infestação de pulgões. Alguém pode sugerir métodos naturais ou produtos eficazes para combater essas pragas? Agradeço qualquer dica ou recomendação!",
             img: imagem1,
-            date: '14:24 21/08/2024'
-        }
+            date: "10:30 30/08/2024"
+        },
+        {
+            titulo: "Alerta de Geada: Proteja suas Culturas esta Noite!",
+            pfp: agricultor3,
+            categoria: "Alerta Climático",
+            descricao: "De acordo com a previsão do tempo, teremos uma geada forte esta noite. Certifique-se de proteger suas plantas e culturas para evitar danos. Veja algumas dicas para minimizar os efeitos da geada nas suas plantações.",
+            img: null,
+            date: "11:15 30/08/2024"
+        },
+        {
+            titulo: "Experiência com Cultivo de Batatas em Caixas de Madeira",
+            pfp: agricultor4,
+            categoria: "Curiosidade",
+            descricao: "Recentemente experimentei cultivar batatas em caixas de madeira e obtive resultados surpreendentes! Compartilho minhas experiências e resultados para quem estiver interessado em experimentar essa técnica de cultivo inovadora.",
+            img: batata,
+            date: "13:00 30/08/2024"
+        },
+        {
+            titulo: "Perguntas sobre Irrigação por Gotejamento: Dúvidas e Respostas",
+            pfp: agricultor5,
+            categoria: "Perguntas Frequentes",
+            descricao: "Tenho algumas dúvidas sobre a instalação e manutenção de um sistema de irrigação por gotejamento. Se alguém tem experiência com isso e pode compartilhar dicas e melhores práticas, ficarei muito grato!",
+            img: null,
+            date: "14:45 30/08/2024"
+        }         
     ]);
 
     const addPost = (newPost) =>  {

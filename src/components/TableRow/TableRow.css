@@ -37,3 +37,16 @@
     justify-content: center;
     align-items: center;
 }
+
+.tabela-conteudos-relacionados {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.redirect {
+    height: 30px;
+    width: 30px;
+    margin-left: 30px;
+}

@@ -136,7 +136,7 @@ const Post = ({ titulo, pfp, categoria, descricao, img, date }) => {
                         <div className='post-image'>
                             <img src={img} />
                         </div>
-                        {descricao}
+                        <p className='post-descricao'>{descricao}</p>
                         <div className="postBottom" style={{width: '100%', display: 'flex'}}>
                             <span style={{marginLeft: 'auto'}}>{formattedDate}</span>
                         </div>

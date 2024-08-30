@@ -40,6 +40,7 @@ const CallingsTable = ({callingsData, updateCallingStatus}) => {
                         <tr>
                             <th>ID</th>
                             <th>Assunto</th>
+                            <th>Categoria</th>
                             <th>Última atualização</th>
                             <th>Estado</th>
                         </tr>

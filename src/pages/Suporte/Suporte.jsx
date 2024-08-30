@@ -2,36 +2,45 @@ import { useState } from "react";
 import AbrirChamado from "../../components/AbrirChamado/AbrirChamado.jsx"
 import CallingsTable from "../../components/CallingsTable/CallingsTable.jsx"
 import NavBar from "../../components/NavBar/NavBar.jsx"
-import holder4 from "../../assets/holder4.png"
+import screenshot1 from "../../assets/Screenshot_1.png"
 
 const Suporte = () => {
     const [callingsData, setCallingsData]  = useState([
         {
             id: '001',
-            categoria: 'Suporte poggers',
+            categoria: 'Erros técnicos',
             assunto: 'Falha ao realizar o cadastro',
-            texto: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, eveniet est? Obcaecati, fugit voluptate dolore qui quaerat illum dicta ipsam laudantium iure itaque sed quis reiciendis odit maxime velit consectetur similique facilis suscipit, praesentium voluptatum, doloribus molestiae tempore laboriosam. Impedit repudiandae magni id, nihil nulla fugiat beatae veritatis at velit voluptate debitis quasi accusantium! Sint sequi sapiente maxime minima ullam cupiditate, ratione dolorum. Quam minima dolore ullam harum magnam veritatis, doloremque, doloribus voluptatum ratione explicabo odio labore fuga placeat nostrum obcaecati. Maiores, quasi cumque minus ad sed voluptas minima in. Quis dicta fuga beatae, aperiam perferendis maxime est necessitatibus dolore.',
-            imagem: holder4,
+            texto: 'Olá, Estou enfrentando problemas ao tentar acessar o sistema Agronex. As páginas não estão carregando corretamente, e o tempo de resposta está extremamente lento. Esse problema começou hoje após eu atualizar o meu navegador (Google Chrome). Já tentei algumas soluções por conta própria, mas nada funcionou até agora. Aqui está o que eu já tentei: Verifiquei que estou conectado à internet e que outros sites estão funcionando normalmente. Tentei acessar o sistema Agronex usando outros navegadores, como Firefox, mas o problema continua. Limpei o cache e os cookies do navegador e reiniciei tanto o navegador quanto o computador, mas o sistema ainda não carrega como deveria. Preciso de ajuda para resolver esse problema, pois está me impedindo de realizar minhas tarefas diárias. Em anexo, estou enviando uma captura de tela do erro que aparece.',
+            imagem: screenshot1,
             date: '21/08/2024 14:40',
-            status: 'Pendente'
+            status: 'Aberto'
         },
         {
             id: '002',
-            categoria: 'Suporte poggers',
-            assunto: 'Erro ao enviar post',
-            texto: 'aaaa',
+            categoria: 'Erros técnicos',
+            assunto: 'Problemas de Carregamento de Páginas no Sistema',
+            texto: 'Estou enfrentando problemas ao tentar carregar as páginas do sistema. As páginas não estão carregando corretamente ou ficam travadas durante o processo. Esse problema ocorre em diferentes momentos e parece estar afetando a navegação geral no sistema.',
             imagem: null,
-            date: '21/08/2024 14:39',
-            status: 'Fechado'
+            date: '29/08/2024 14:13',
+            status: 'Aberto'
         },
         {
             id: '003',
-            categoria: 'Suporte poggers',
-            assunto: 'Erro ao comentar em um post',
-            texto: 'aaaa',
+            categoria: 'Alterações de conta',
+            assunto: 'Solicitação de Alteração de Conta',
+            texto: 'Gostaria de solicitar uma alteração em minha conta. Especificamente, preciso de assistência para: Atualizar meu endereço de email de "jose.silva@example.com" para "jose.silva.new@example.com".',
             imagem: null,
-            date: '21/08/2024 14:38',
-            status: 'Aberto' 
+            date: '30/08/2024 14:21',
+            status: 'Aberto'
+        },
+        {
+            id: '004',
+            categoria: 'Compatibilidade e navegação',
+            assunto: 'Problemas de Compatibilidade com o Navegador',
+            texto: 'Estou enfrentando problemas ao tentar acessar o sistema. Parece que a página não está sendo exibida corretamente em meu navegador. Gostaria de assistência para resolver questões de compatibilidade. Nome do Navegador: Google Chrome, Versão do Navegador: 114.0.5735.90. As páginas do sistema não estão carregando corretamente. O layout está desconfigurado e alguns elementos interativos não funcionam. Tentei acessar o sistema em outros navegadores, como Firefox e Microsoft Edge, e o problema persiste.',
+            imagem: null,
+            date: '30/08/2024 14:25',
+            status: 'Aberto'
         }
     ]);
 

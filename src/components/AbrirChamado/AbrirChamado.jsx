@@ -67,7 +67,9 @@ const AbrirChamado = ({ addCalling, nextId }) => {
                             <label htmlFor='categoria' className='col-form-label'>Categoria:</label>
                             <select id='categoria' className='form-control' value={categoria} onChange={(e) => setCategoria(e.target.value)} required>
                                 <option value=''>Selecione uma opção</option>
-                                <option value='Suporte técnico' >Suporte técnico</option>
+                                <option value='Erros técnicos' >Erros técnicos</option>
+                                <option value='Alterações de conta' >Alterações de conta</option>
+                                <option value='Compatibilidade e navegação' >Compatibilidade</option>
                             </select>
                         </div>
                         <div className='form-group'>
