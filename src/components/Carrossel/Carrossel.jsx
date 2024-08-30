@@ -6,7 +6,8 @@ import Arrow2 from '../../assets/Arrow 2.png';
 const Carrossel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const slides = [
-        { type: 'youtube', videoId: 'bhQMzNqnfhE' }
+        { type: 'youtube', videoId: 'bhQMzNqnfhE' },
+        { type: 'youtube', videoId: 'PbAQgXlqrJo'}
     ];
 
     const prevSlide = () => {
