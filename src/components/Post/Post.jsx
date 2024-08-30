@@ -8,12 +8,16 @@ import repost from "../../assets/repost.png";
 import commentary from "../../assets/commentary.png";
 import { format, isToday, isYesterday, parse } from 'date-fns';
 import Comentario from '../Comentario/Comentario';
+import send from '../../assets/send.png'
+
 
 
 const Post = ({ titulo, pfp, categoria, descricao, img, date }) => {
     const [show, setShow] = useState(false);
     const [votes, setVotes] = useState(0);
     const [voted, setVoted] = useState(null);
+    const [comments, setComments] = useState([]);
+    const [newCommentary, setNewCommentary] = useState('');
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -47,6 +51,13 @@ const Post = ({ titulo, pfp, categoria, descricao, img, date }) => {
         setVotes(prevVotes => prevVotes + 1);
         setVoted(null);
        }
+    }
+
+    const handleNewComment = () => {
+        if (newCommentary.trim() !== '') {
+            setComments([...comments, newCommentary]);
+            setNewCommentary('');
+        }
     }
 
     return (
@@ -130,9 +141,25 @@ const Post = ({ titulo, pfp, categoria, descricao, img, date }) => {
                             <span style={{marginLeft: 'auto'}}>{formattedDate}</span>
                         </div>
                     </div>
+                    <div>
+                        <hr />
+                        <div className="form-group" style={{ width: '100%' }} id="comentario">
+                            <textarea className="form-control" placeholder="Digite sua resposta..." value={newCommentary} onChange={(e) => setNewCommentary(e.target.value)}></textarea>
+                            <button id="enviar" type="submit" onClick={handleNewComment}>
+                                <img src={send}></img>
+                            </button>
+                        </div>
+                        <div>
+                            {comments.length > 0 ? (
+                                comments.map((comment, index) => (
+                                    <Comentario key={index} comentario={comment} />
+                                ))
+                            ) : (
+                                <p>Sem comentários ainda.</p>
+                            )}
+                        </div>
+                    </div>
                 </Modal.Body>
-                <Modal.Footer>
-                </Modal.Footer>
             </Modal>
         </div>
     );

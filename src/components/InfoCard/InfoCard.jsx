@@ -28,7 +28,7 @@ const InfoCard = () => {
             imagem: lain,
             cor: 'rgb(149 164 233)',
             nome: 'Tecnologias utilizadas',
-            funcao: 'HTML, CSS, JS, React, Bootstrap, Algorítmos'
+            funcao: 'HTML, CSS, JS, React, Bootstrap, Algorítmos, Vite'
         }
     ]
 

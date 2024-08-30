@@ -30,3 +30,10 @@
 .descricao-content {
     margin-top: 10px;
 }
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
