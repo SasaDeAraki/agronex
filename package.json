@@ -29,6 +29,6 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "react-router-dom": "^6.26.1",
     "style-loader": "^4.0.0",
-    "vite": "^5.3.4"
+    "vite": "^6.3.5"
   }
 }
